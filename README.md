@@ -1,4 +1,4 @@
-#Fractional calculator
+# Fractional calculator
 
 This project takes in arbitrary rational numbers (and basic operators) and evaluates them. The result is given as a rational number.
 
