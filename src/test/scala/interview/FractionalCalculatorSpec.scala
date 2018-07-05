@@ -22,4 +22,11 @@ class FractionalCalculatorSpec extends FlatSpec with Matchers {
     Calc("1/2 * 3_3/4").toString shouldEqual "1_7/8"
     Calc("2_3/8 + 9/8").toString shouldEqual "3_1/2"
   }
+
+  "The calculator" should "obey basic mathematical principals" in {
+    Calc("0 + 1/2") shouldEqual RationalNumber(1, 2)
+    Calc("0 - 1/2") shouldEqual RationalNumber(-1, 2)
+    Calc("0 * 1/2") shouldEqual RationalNumber(0)
+    Calc("0 / 1/2") shouldEqual RationalNumber(0)
+  }
 }
